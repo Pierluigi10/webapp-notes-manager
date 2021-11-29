@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { NotesContext } from "./context";
+import { Link } from "react-router-dom";
 
 function Note({ note, onDelete }) {
   return (
@@ -7,6 +8,7 @@ function Note({ note, onDelete }) {
       <h2>{note.title}</h2>
       <p>{note.content}</p>
       <button onClick={onDelete}> delete</button>
+      <Link to={`/edit/${note.id}`}>edit</Link>
     </div>
   );
 }
