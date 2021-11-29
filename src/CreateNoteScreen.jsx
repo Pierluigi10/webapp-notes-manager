@@ -20,7 +20,7 @@ export function CreateNoteScreen() {
       />
       <button
         onClick={(e) => {
-          setNotes([...notes, { title, content }]);
+          setNotes([...notes, { title, content, id: notes.length + 1 }]);
           setTitle("");
           setContent("");
         }}

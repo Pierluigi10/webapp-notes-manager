@@ -16,8 +16,8 @@ export function HomeScreen() {
     <>
       <h3>Notes</h3>
       <ul>
-        {notes.map((note, position) => (
-          <Note key={position} note={note} />
+        {notes.map((note) => (
+          <Note key={note.id} note={note} />
         ))}
       </ul>
       <pre>{JSON.stringify(notes)}</pre>

@@ -6,8 +6,8 @@ import { HomeScreen } from "./HomeScreen";
 
 function App() {
   const [notes, setNotes] = useState([
-    { tile: "Note 1", content: "Note 1 content" },
-    { tile: "Note 2", content: "Note 2 content" },
+    { id:1, tile: "Note 1", content: "Note 1 content" },
+    {id: 2, tile: "Note 2", content: "Note 2 content" },
   ]);
   return (
     <NotesContext.Provider value={{ notes, setNotes }}>
