@@ -9,8 +9,14 @@ function App() {
     { id:1, tile: "Note 1", content: "Note 1 content" },
     {id: 2, tile: "Note 2", content: "Note 2 content" },
   ]);
+
+
+function deleteNote(id) {
+  setNotes(notes.filter(note => note.id !== id))
+}
+
   return (
-    <NotesContext.Provider value={{ notes, setNotes }}>
+    <NotesContext.Provider value={{ notes, setNotes, deleteNote }}>
       <div className="App">
         <header className="App-header">
           <h1>
