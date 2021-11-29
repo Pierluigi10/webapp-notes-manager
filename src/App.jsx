@@ -1,26 +1,30 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
+import { CreateNoteScreen } from "./CreateNoteScreen";
 
-function HomeScreen(){
-  return(
+function HomeScreen() {
+  return (
     <>
-    <h3>Home</h3>
+      <h3>Home</h3>
     </>
-  )
+  );
 }
-
 
 function App() {
   return (
     <div className="App">
-        <header className="App-header">
-          <p>Notes App</p>
-        </header>
-        <main>
-      <Routes>
+      <header className="App-header">
+        <h1>
+          <Link to="/"> Notes App </Link>
+        </h1>
+        <Link to="/create"> create </Link>
+      </header>
+      <main>
+        <Routes>
           <Route path="/" element={<HomeScreen />} />
-      </Routes>
-        </main>
-        <footer>footer</footer>
+          <Route path="/create" element={<CreateNoteScreen />} />
+        </Routes>
+      </main>
+      <footer>footer</footer>
     </div>
   );
 }
