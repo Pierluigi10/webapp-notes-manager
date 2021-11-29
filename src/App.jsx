@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
-import { NotesContext } from "./contex";
+import { NotesContext } from "./context";
 import { CreateNoteScreen } from "./CreateNoteScreen";
 import { HomeScreen } from "./HomeScreen";
 
@@ -10,7 +10,7 @@ function App() {
     { tile: "Note 2", content: "Note 2 content" },
   ]);
   return (
-    <NotesContext.Provider value={useState({ notes, setNotes })}>
+    <NotesContext.Provider value={{ notes, setNotes }}>
       <div className="App">
         <header className="App-header">
           <h1>
