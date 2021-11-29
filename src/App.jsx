@@ -14,7 +14,7 @@ function App() {
       <div className="App">
         <header className="App-header">
           <h1>
-            <Link to="/"> Notes App </Link>
+            <Link to="/"> Notes App ({notes.length}) </Link>
           </h1>
           <Link to="/create"> create </Link>
         </header>
