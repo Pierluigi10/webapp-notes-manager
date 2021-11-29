@@ -1,13 +1,6 @@
 import { Routes, Route, Link } from "react-router-dom";
 import { CreateNoteScreen } from "./CreateNoteScreen";
-
-function HomeScreen() {
-  return (
-    <>
-      <h3>Home</h3>
-    </>
-  );
-}
+import { HomeScreen } from "./HomeScreen";
 
 function App() {
   return (
