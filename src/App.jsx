@@ -5,7 +5,10 @@ import { CreateNoteScreen } from "./CreateNoteScreen";
 import { HomeScreen } from "./HomeScreen";
 
 function App() {
-  const [notes, setNotes] = useState([]);
+  const [notes, setNotes] = useState([
+    { tile: "Note 1", content: "Note 1 content" },
+    { tile: "Note 2", content: "Note 2 content" },
+  ]);
   return (
     <NotesContext.Provider value={useState({ notes, setNotes })}>
       <div className="App">
