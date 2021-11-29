@@ -26,10 +26,20 @@ function App() {
     <NotesContext.Provider value={{ notes, setNotes, deleteNote }}>
       <div className="uk.container">
         <header className="App-header">
-          <h1 className=".uk-text-lead">
-            <Link to="/"> Notes App ({notes.length}) </Link>
-          </h1>
-          <Link to="/create"> create </Link>
+          <h1 className=".uk-text-lead">Notes App</h1>
+
+          <nav className="uk-navbar-container" uk-navbar>
+            <div className="uk-navbar-left">
+              <ul className="uk-navbar-nav">
+                <li className="uk-active">
+                  <Link to="/create"> create </Link>
+                </li>
+                <li className="uk-active">
+                  <Link to="/"> Notes ({notes.length})</Link>
+                </li>
+              </ul>
+            </div>
+          </nav>
         </header>
         <main>
           <Routes>

@@ -29,6 +29,7 @@ export function EditNoteScreen() {
         onChange={(e) => setContent(e.target.value)}
       />
       <button
+        className="uk-button uk-button-default"
         onClick={(e) => {
           setNotes([
             ...notes.filter((n) => n.id !== noteToEdit.id),

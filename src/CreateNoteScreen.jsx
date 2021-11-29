@@ -21,7 +21,7 @@ export function CreateNoteScreen() {
         value={content}
         onChange={(e) => setContent(e.target.value)}
       />
-      <button
+      <button className="uk-button uk-button-default"
         onClick={(e) => {
           setNotes([...notes, { title, content, id: notes.length + 1 }]);
           setTitle("");
